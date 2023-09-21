@@ -14,7 +14,11 @@ public class ImplDAOStudent implements IDAOStudent{
 
     @Override
     public void updateStudent(Student student) {
-
+        Student e = findByCif(student.getCif());
+        e.setFirstName(student.getFirstName());
+        e.setSecondName(student.getSecondName());
+        e.setLastName(student.getLastName());
+        e.setLastName2(student.getLastName2());
     }
 
     @Override
@@ -30,6 +34,11 @@ public class ImplDAOStudent implements IDAOStudent{
 
     @Override
     public Student findByCif(String cif) {
+        for(Student e : DataBase.studentList) {
+            if(e.getCif().equals(cif)){
+                return e;
+            }
+        }
         return null;
     }
 }

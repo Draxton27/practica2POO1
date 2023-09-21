@@ -57,4 +57,15 @@ public class Student {
     public void setLastName2(String lastName2) {
         this.lastName2 = lastName2;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "cif='" + cif + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", lastName2='" + lastName2 + '\'' +
+                '}';
+    }
 }
